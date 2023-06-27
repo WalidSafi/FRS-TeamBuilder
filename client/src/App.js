@@ -14,7 +14,7 @@ function App() {
   const [data, setData] = useState([{}])
 
   useEffect(() => {
-    axios('/team')
+    axios('/hello')
       .then((response) => {
         console.log(response.data)
         setData(response.data)
@@ -36,13 +36,11 @@ function App() {
       {(typeof data === 'undefined') ? (
         <div>loading...</div>
       ) : (
-        <div id='MainContainer' class='relative bg-white p-10'>
-          <div id='TeamBuilderContainerHome' class='w-full'>
+        <div id='MainContainer' className='relative bg-white p-10'>
+          <div id='TeamBuilderContainerHome' className='w-full'>
             <img src={background}/>
-            <div class='mx-auto max-w-screen-2xl px-2 sm:px-6 lg:px-10'>
-              <h1 class='hidden sm:ml-6 sm:block'>TEAM BUILDER</h1>
-              <p class='text-3xl font-bolt underline'>{data.id}</p>
-              <p class='text-3xl font-bolt underline'>{data.author}</p>
+            <div className='mx-auto max-w-screen-2xl px-2 sm:px-6 lg:px-10'>
+              <h1 className='hidden sm:ml-6 sm:block'>TEAM BUILDER</h1>
             </div>
           </div>
         </div>
