@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_mysqldb import MySQL
 from flask_cors import CORS, cross_origin
 import json
@@ -18,7 +18,7 @@ mysql = MySQL(app)
 @app.route('/')
 @cross_origin()
 def serve():
-    return app.send_from_directory(app.static_folder, 'index.html')
+    return send_from_directory(app.static_folder, 'index.html')
 
 @app.route('/hello')
 @cross_origin()
