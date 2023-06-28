@@ -3,7 +3,8 @@ from flask_mysqldb import MySQL
 from flask_cors import CORS, cross_origin
 import json
 
-app = Flask(__name__, static_folder='client/build')
+app = Flask(__name__, static_folder='client/build', static_url_path='')
+
 CORS(app)
 
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:root@localhost:3306/your_database_name'
