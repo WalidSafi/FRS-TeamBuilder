@@ -9,9 +9,13 @@ CORS(app)
 
 mysql = MySQL(app)
 
-@app.route('/')
-@cross_origin()
-def serve():
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def serve(path):
+    if "api" in path:
+        # Exclude API routes, let Flask handle them
+        return
+    # Serve the React app's index.html for all other routes
     return send_from_directory(app.static_folder, 'index.html')
 
 @app.route('/api/hello')
@@ -21,4 +25,3 @@ def hello():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0',debug=True, port=int(os.environ.get("PORT", 5000)))
-
