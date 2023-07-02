@@ -5,9 +5,6 @@ import Navbar from './NavigationBar/Navbar.jsx'
 import { BrowserRouter as Router, Route, Routes, Redirect } from 'react-router-dom'
 import background from './Images/background.png'
 import TeamBuilder from './TeamBuilderComponents/TeamBuilder'
-import TeamBuilderId from './TeamBuilderComponents/TeamBuilderId'
-import TeamBuilderAuthor from './TeamBuilderComponents/TeamBuilderAuthor'
-import NotFound from './NotFoundComponent/NotFound'
 
 function App() {
 
@@ -27,10 +24,7 @@ function App() {
         <Navbar />
         <Router>
             <Routes>
-                <Route path="/teamBuilder" element={<TeamBuilder />} />
-                <Route path="/teamBuilder/:id" element={<TeamBuilderId />} />
-                <Route path="/teamBuilder/author" element={<TeamBuilderAuthor />} />
-                <Route path="/NotFound" element={<NotFound />} />
+                <Route path="/TeamBuilder" element={<TeamBuilder />} />
              </Routes>
         </Router>
       {(typeof data === 'undefined') ? (
