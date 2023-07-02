@@ -27,10 +27,10 @@ export default function Navbar() {
         <div className="hidden sm:ml-6 sm:block">
           <div className="flex space-x-12">
   
-            <a href='\' className="bg-gray-900 text-white rounded-md px-5 py-2 text-xl font-medium" aria-current="page">Home</a>
-            <a href='\TeamBuilder'className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-5 py-2 text-xl font-medium">Team Builder</a>
-            <a href='\TeamBuilder\author'className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-5 py-2 text-xl font-medium">Players</a>
-            <a href='\'className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-5 py-2 text-xl font-medium">Predictions</a>
+            <a href='/' className="bg-gray-900 text-white rounded-md px-5 py-2 text-xl font-medium" aria-current="page">Home</a>
+            <Link to='/TeamBuilder' className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-5 py-2 text-xl font-medium">Test</Link>
+            <a href='/TeamBuilder\author'className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-5 py-2 text-xl font-medium">Players</a>
+            <a href='/'className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-5 py-2 text-xl font-medium">Predictions</a>
           </div>
         </div>
       </div>
