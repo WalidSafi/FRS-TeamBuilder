@@ -14,7 +14,7 @@ function App() {
   const [data, setData] = useState([{}])
 
   useEffect(() => {
-    axios('/hello')
+    axios('/api/hello')
       .then((response) => {
         console.log(response.data)
         setData(response.data)
