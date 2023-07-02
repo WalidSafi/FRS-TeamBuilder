@@ -20,7 +20,7 @@ mysql = MySQL(app)
 def serve():
     return send_from_directory(app.static_folder, 'index.html')
 
-@app.route('/hello')
+@app.route('/api/hello')
 @cross_origin()
 def hello():
     return 'Hello, World!'
