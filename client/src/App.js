@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react'
 import axios from 'axios'
 import './index.css'
 import Navbar from './NavigationBar/Navbar.jsx'
-import { BrowserRouter as Router, Route, Routes, Redirect } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, Redirect } from 'react-router-dom'
 import background from './Images/background.png'
 import TeamBuilder from './TeamBuilderComponents/TeamBuilder'
 
@@ -21,12 +21,12 @@ function App() {
       
   return (
     <div>
+      <BrowserRouter>
         <Navbar />
-        <Router>
             <Routes>
                 <Route path="/TeamBuilder" element={<TeamBuilder />} />
              </Routes>
-        </Router>
+        </BrowserRouter>
       {(typeof data === 'undefined') ? (
         <div>loading...</div>
       ) : (
